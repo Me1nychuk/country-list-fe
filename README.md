@@ -1,36 +1,115 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Country Data Viewer
 
-## Getting Started
+This project allows you to view information about countries, including their flags, populations, and other related data. It uses Next.js, TypeScript, and various libraries to deliver a modern and dynamic user experience.
 
-First, run the development server:
+## Technologies
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Next.js** — for building the project.
+- **TypeScript** — for type safety and development.
+- **Tailwind CSS** — for styling.
+- **ShadCN UI** — for UI components.
+- **Recharts** — for creating charts.
+- **Axios** — for making API requests.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Folder Structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **`app/`**: Contains the main pages and routing logic.
+- **`shared/components/`**: Shared UI components across the project.
+- **`shared/services/`**: Contains API service functions.
+- **`shared/styles/`**: Contains global and modular CSS styles.
+- **`shared/types/`**: TypeScript type definitions used throughout the project.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Installation
 
-## Learn More
+1. Clone the repository:
 
-To learn more about Next.js, take a look at the following resources:
+   ```bash
+   git clone https://github.com/YourUsername/country-list-fe
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. Navigate to the project directory:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   ```bash
+   cd country-list-fe
+   ```
 
-## Deploy on Vercel
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Scripts
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. **dev**: Starts the development server with TurboPack (for faster builds).
+
+   ```bash
+   npm run dev
+   ```
+
+2. **build**: Builds the project for production.
+
+   ```bash
+   npm run build
+   ```
+
+3. **start**: Starts the production server.
+
+   ```bash
+   npm run start
+   ```
+
+4. **lint**: Lints the codebase to ensure code quality.
+   ```bash
+   npm run lint
+   ```
+
+## API Description
+
+This project uses an API for fetching country data. Here’s an overview of available endpoints:
+
+1. **Get All Countries**
+
+   - **Method**: GET
+   - **Route**: `/countries`
+   - **Description**: Fetches a list of all countries.
+
+2. **Get Country Information**
+   - **Method**: GET
+   - **Route**: `/country/[id]`
+   - **Description**: Fetches detailed information about a specific country based on its ID (or slug).
+
+## Configuration
+
+In the `.env` file, specify the following environment variables:
+
+- `NEXT_PUBLIC_API_URL` — Base URL of your api.
+
+## Folders and Their Contents
+
+### `app/`
+
+Contains the main application pages and route configuration.
+
+- `country/[id]`: Detailed country page.
+- `layout.tsx`: Layout for the application pages.
+- `page.tsx`: Main page of the project.
+
+### `shared/`
+
+Contains shared logic, services, and components.
+
+#### `shared/components/`
+
+Contains UI components used throughout the project.
+
+#### `shared/services/`
+
+Contains service functions that handle API requests.
+
+#### `shared/styles/`
+
+Contains global and component-specific styles.
+
+#### `shared/types/`
+
+Contains TypeScript types for shared data structures.
